@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title>Object Oriented Programming</title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="1344.72">
+  <style type="text/css">
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; color: #000000; -webkit-text-stroke: #000000}
+    p.p3 {margin: 0.0px 0.0px 6.0px 0.0px; font: 12.0px Times; color: #000000; -webkit-text-stroke: #000000; min-height: 14.0px}
+    p.p6 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; color: #000000; -webkit-text-stroke: #000000; min-height: 14.0px}
+    span.s1 {font-kerning: none}
+    span.s2 {font-kerning: none; color: #000000}
+  </style>
+</head>
+<body>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; text-align: center; font: 24.0px Times; color: #000000; -webkit-text-stroke: #000000"><span class="s1"><b>Formula 1<br>
+</b></span></h1>
+<p class="p2"><span class="s1">Develop a Java application, which allows Formula 1 organizers to manage standings of Formula 1 championship. All the classes must be in the </span><span class="s2">package </span><span class="s1">"formula1".</span></p>
+<p class="p3"><span class="s1"></span><br></p>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; color: #000000; -webkit-text-stroke: #000000"><span class="s1"><b>R1 - Drivers Definition</b></span></h2>
+<p class="p2"><span class="s1">The system works through the facade class <b>Championship</b>.<span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s1">The method <b>createDriver() </b>accepts the driver name and creates a <b>Driver </b>object. The class <b>Driver </b>provides the method <b>getName()</b>, which returns the Driver’s name.</span></p>
+<p class="p2"><span class="s1">The method <b>getDrivers()</b> returns a Collections of Drivers. The method <b>getDriver()</b> receives the driver name as an input and returns the corresponding Driver object.</span></p>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; color: #000000; -webkit-text-stroke: #000000; min-height: 23.0px"><span class="s1"><b></b></span><br></h2>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; color: #000000; -webkit-text-stroke: #000000"><span class="s1"><b>R2 - Grand Prix</b></span></h2>
+<p class="p2"><span class="s1">The drivers compete in an undefined number of Grand Prix. The method <b>defineGrandPrix()</b> is used </span><span class="s2">to define a GP. </span><span class="s1">It receives the name of the GP (e.g. “Monza”) </span><span class="s2">as a parameter.</span><span class="s1"> This method returns an object of type GP. The class GP offers the method <b>getName()</b>, which returns the GP name.</span></p>
+<p class="p2"><span class="s1">To obtain a specific GP it is possible to use the method </span><span class="s2"><b>getGrandPrix()</b></span><span class="s1"> of the class Championship, which receives the name of the GP as a parameter.</span></p>
+<p class="p6"><span class="s1"></span><br></p>
+<p class="p6"><span class="s1"></span><br></p>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; color: #000000; -webkit-text-stroke: #000000"><span class="s1"><b>R3 - Time</b></span></h2>
+<p class="p2"><span class="s1">The drivers who drive in a Grand Prix complete the race in a race time. This time can be stored into the system through the method <b>setTime()</b>, which receives as an input the corresponding GP object, the Driver object and the time expressed as hours, minutes, seconds, and cents.</span></p>
+<p class="p2"><span class="s1">This method returns an object of type Time, which overrides the method <b>toString()</b>, in order to print the race time in this format: "h:m:s.c" (e.g.. if h=1, m=30, s=5, c=40 the method returns "1:30:5.40").</span></p>
+<p class="p2"><span class="s1">Given a Grand Prix it is possible to get the race result by the method <b>getGPRanking()</b>, which returns a list of drivers sorted in ascending way based on the race time.</span></p>
+<p class="p6"><span class="s1"></span><br></p>
+<p class="p6"><span class="s1"></span><br></p>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; color: #000000; -webkit-text-stroke: #000000"><span class="s1"><b>R4  - Ranking</b></span></h2>
+<p class="p2"><span class="s1">Given a Grand Prix it is possible to get the ranking position of a driver by using the method <b>getPosition()</b>, which gets the corresponding driver object as an input.<span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s1">Given a driver it is possible to know which GP he raced by using the method <b>getRaced()</b>.</span></p>
+<p class="p2"><span class="s1">Given a driver it is possible to know how many points he earned during the race based on this rule: 25 points for the first, 18 for the second, 15 for the third, 12 for the fourth, 10 for the fifth, 8 for the sixth, 6 for the seventh, 4 for the eighth, 2 for the ninth, 1 for the tenth.<span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s1">The method <b>getPoints()</b> returns and integer number which represents the number of points earned by the driver during the GP.</span></p>
+<p class="p2"><span class="s1">In the class Championship the method <b>getChampionshipRanking</b>() returns a collection of Drivers sorted in descending way based on the points earned by each driver during the championship.</span></p>
+</body>
+</html>
